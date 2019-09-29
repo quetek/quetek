@@ -8,7 +8,7 @@ class PagerAdapter (fm : FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0-> MainPage()
-            1-> People()
+            else-> People()
         }
     }
 
@@ -19,7 +19,7 @@ class PagerAdapter (fm : FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getPageTitle(position: Int): CharSequence? {
         return when (position) {
             0-> "MainPage"
-            1-> "People"
+            else-> "People"
         }
     }
 }
