@@ -1,0 +1,25 @@
+package sk.tasnv.wosy.quetek
+
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
+
+class PagerAdapter (fm : FragmentManager) : FragmentPagerAdapter(fm) {
+    override fun getItem(position: Int): Fragment {
+        return when (position) {
+            0-> MainPage()
+            1-> People()
+        }
+    }
+
+    override fun getCount(): Int {
+        return  2
+    }
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when (position) {
+            0-> "MainPage"
+            1-> "People"
+        }
+    }
+}
